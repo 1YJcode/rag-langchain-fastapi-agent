@@ -166,7 +166,7 @@ npm run dev
 | 流式 | Server-Sent Events (SSE) |
 | 认证 | JWT (HTTPBearer) |
 
-## 配置说明
+# 配置说明
 # LLM 模型切换
 系统支持 阿里云百炼（DashScope） 和 **Ollama（本地部署）**两种模式：
 
@@ -175,7 +175,7 @@ LLM_TYPE=OLLAMA：使用本地 Ollama 模型
 # 重排序模型
 下载 Qwen3-Reranker-0.6B 模型并配置 RERANKER_MODEL_PATH 路径，参考 模型配置指南。
 
-## 故障排除
+# 故障排除
 详细的故障排除指南请参考：故障排除
 
 # 常见问题：
@@ -185,7 +185,7 @@ API Key 错误：检查 ALIYUN_ACCESS_KEY 是否正确配置
 ChromaDB 异常：检查 chroma.yaml 中的路径配置
 重排序模型加载失败：确认 RERANKER_MODEL_PATH 指向正确的模型路径
 Ollama 连接失败：确认 ollama serve 已运行且模型已拉取
-联系方式
+# 联系方式
 如有任何问题或建议，欢迎提交 GitHub Issues 或联系作者：
 
 Email: 2655609714@qq.com
