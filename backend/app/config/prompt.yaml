@@ -1,0 +1,4 @@
+main_prompt: app/prompts/main_prompt.txt
+rag_summarize_prompt: app/prompts/rag_summarize.txt
+report_prompt: app/prompts/report_prompt.txt
+reorder_prompt: app/prompt/reorder_prompt.txt
