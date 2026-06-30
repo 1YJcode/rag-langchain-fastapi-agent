@@ -11,6 +11,7 @@ from backend.app.db.redis_config import connect_redis, close_redis
 from backend.app.router.chat import chat_router
 from backend.app.router.health import health_router
 from backend.app.router.user import user_router
+from backend.app.rag.reorder_service import check_and_download_rerank_model
 from backend.app.services.database_session_manager import init_database_session_manager
 
 
@@ -62,10 +63,6 @@ async def say_hello(name: str):
     return {"message": f"Hello {name}"}
 
 
-def check_and_download_reranker_model():
-    pass
-
-
 @app.on_event("startup")
 async def startup_event():
     """应用启动时初始化会话管理器"""
@@ -81,8 +78,8 @@ async def startup_event():
     await connect_redis()
     logger.info("Redis连接初始化完成")
 
-    # 检查并重排序模型
-    check_and_download_reranker_model()
+    # 检查并下载重排序模型
+    check_and_download_rerank_model()
     logger.info("重排序模型检查完成")
 
 
